@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "media-resolver"
+version = "0.1.0"
+description = "Interactive media resolver/downloader with honest quality verification."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "sssilverhand" },
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: GNU Affero General Public License v3",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Multimedia :: Sound/Audio",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = [
+  "click>=8.1",
+  "rich>=13.7",
+  "questionary>=2.0",
+  "yt-dlp>=2025.1.0",
+  "mutagen>=1.47",
+  "musicbrainzngs>=0.7",
+  "requests>=2.32",
+  "chardet>=5.2",
+  "spotipy>=2.24",
+  "tidalapi>=0.8.11",
+  "tiddl>=2.8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+  "pyinstaller>=6.0",
+]
+metadata = [
+  "discogs-client>=2.3",
+]
+
+[project.scripts]
+media-resolver = "media_resolver.app:main"
+
+[project.urls]
+Homepage = "https://github.com/sssilverhand/media-resolver"
+Repository = "https://github.com/sssilverhand/media-resolver"
+Issues = "https://github.com/sssilverhand/media-resolver/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
