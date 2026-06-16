@@ -1,0 +1,54 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build and packaging output
+build/
+dist/
+portable/
+artifacts/
+*.egg-info/
+pip-wheel-metadata/
+*.spec
+
+# Local runtime data
+cache/
+downloads/
+archive-downloads/
+tmp/
+*.log
+
+# Local configuration and secrets
+.env
+.env.*
+*.local
+
+# Downloaded helper binaries and optional vendored dependencies
+vendor/bin/*
+!vendor/bin/.gitkeep
+vendor/python/*
+!vendor/python/.gitkeep
+
+# Tooling and editor state
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
